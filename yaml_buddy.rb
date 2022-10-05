@@ -1,5 +1,7 @@
-# Module that can be included (mixin) to take and output Yaml data
+# frozen_string_literal: true
+
 require 'yaml'
+# Module that can be included (mixin) to take and output Yaml data
 module YamlBuddy
   # take_yaml: converts a String with YAML data into @data
   # parameter: yaml - a String in YAML format
