@@ -8,10 +8,7 @@ module TsvBuddy
     lines = tsv.split(/\n/)
     rows = lines.map { |line| line.split("\t") }
     keys = lines.first.split("\t")
-    # puts "keys are #{keys}"
-    @data = rows[1..].map do |line|
-      keys.zip(line).to_h
-    end
+    @data = rows[1..].map { |line| keys.zip(line).to_h }
   end
 
   # to_tsv: converts @data into tsv string
